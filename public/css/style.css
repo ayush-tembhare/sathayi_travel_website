@@ -1,0 +1,127 @@
+body{
+    font-family: plus-jakarta-sans, sans-serif !important;
+    display:flex;
+    flex-direction: column;
+    min-height: 100vh;;
+}
+
+.container{
+    flex: 1;
+}
+/* /footer/ */
+.navbar{
+    height: 5rems;
+    background-color: white !important;
+}
+.fa-compass{
+    color:crimson;
+    font-size: 2rem;
+}
+.nav-link{
+    color: black !important;
+    font-size: 1rem !important;
+    background-color: white !important;
+}
+
+.f-info-links a{
+    text-decoration: none;
+    color:black;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info {
+    height: 8rem;
+    background-color: #e9eaea;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+    text-align: center;
+}
+
+.f-info-socials{
+    width:100%;
+    font-size: 1.2rem;
+}
+.f-info-socials i{
+    margin:0.5rem;
+}
+
+.f-info-links{
+    width: 100%;
+}
+
+/* /card/ */
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+}
+.review-card {
+    border: 2px solid #ccc !important;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 0.5rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+
+}
+
+.card-body{
+    padding:0rem !important;
+}
+
+.card-text{
+    font-weight: 400;
+    
+}
+
+.listing-link{
+    text-decoration: none !important;
+    
+}
+/* /card effect/ */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: wheat;
+}
+
+
+.btn-dark {
+    background-color: black;
+    color: white;
+}
+
+/* /show-img/ */
+.show-img{
+    height:30vh;
+}
+
+.add-btn{
+    background-color:crimson !important;
+}
+.edit-btn{
+    background-color:crimson !important;
+
+
+}
+.btns{
+    display: flex;
+    
+}
+.bet{
+    background-color: black !important;
+}
+
+.show-card{
+    padding-left:0;
+    padding-right: 0;
+}

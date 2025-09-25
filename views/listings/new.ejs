@@ -1,0 +1,114 @@
+<%- layout("/layouts/boilerplate.ejs") %>
+<body>
+    <br><br>
+   <form method="POST"
+    action="/listings" 
+    class="needs-validation"
+    novalidate
+    enctype="multipart/form-data">
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3 class="mt-3">Create a new listing</h3>
+         
+         <!-- Title -->
+         <div class="mb-3">
+          <label for="title" class="form-label">Title</label>
+          <input type="text" 
+                 placeholder="Add a Catchy Title"
+                 name="listing[title]"
+                 class="form-control"
+                 id="title"
+                 required>
+          <div class="invalid-feedback">Please provide a Valid title.</div>
+          <div class="valid-feedback">Looks good!</div>
+         </div>
+
+         <!-- Description -->
+         <div class="mb-3"> 
+           <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" 
+                      class="form-control" 
+                      id="description"
+                      required></textarea>
+            <div class="invalid-feedback">Please provide a Valid description.</div>
+            <div class="valid-feedback">Looks good!</div>
+         </div>
+         
+         <!-- Image URL -->
+         <div class="mb-3">
+            <label for="image" class="form-label">Upload Listing Image</label>
+            <input type="file" 
+                   name="listing[image]" 
+                   class="form-control"
+                   id="image">
+         </div>
+
+        <!-- Category -->
+<div class="mb-3">
+  <label for="category" class="form-label">Category</label>
+  <select name="listing[category]" class="form-control" id="category" required>
+    <option value="" disabled selected>Select a category</option>
+    <option value="Trending">Trending</option>
+    <option value="Rooms">Rooms</option>
+    <option value="Iconic City">Iconic City</option>
+    <option value="Mountains">Mountains</option>
+    <option value="Castles">Castles</option>
+    <option value="Amazing Pools">Amazing Pools</option>
+    <option value="Camping">Camping</option>
+    <option value="Farms">Farms</option>
+    <option value="Arctic">Arctic</option>
+    <option value="Boats">Boats</option>
+    <option value="Beach">Beach</option>
+    <option value="Domes">Domes</option>
+  </select>
+  <div class="invalid-feedback">Please select a category.</div>
+  <div class="valid-feedback">Looks good!</div>
+</div>
+
+         <!-- Price & Location -->
+         <div class="row"> 
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                 <input type="number" 
+                        placeholder="1200"
+                        name="listing[price]" 
+                        class="form-control"
+                        id="price"
+                        required>
+                 <div class="invalid-feedback">Please provide a valid price.</div>
+                 <div class="valid-feedback">Looks good!</div>
+            </div>
+            
+           <div class="mb-3 col-md-8">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" 
+                   name="listing[location]" 
+                   placeholder="Mumbai" 
+                   class="form-control"
+                   id="location"
+                   required>
+            <div class="invalid-feedback">Please provide a Valid location.</div>
+            <div class="valid-feedback">Looks good!</div>
+           </div>
+        </div>
+    
+         <!-- Country -->
+         <div class="mb-3">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" 
+                   name="listing[country]" 
+                   placeholder="India"
+                   class="form-control"
+                   id="country"
+                   required>
+            <div class="invalid-feedback">Please provide a country.</div>
+            <div class="valid-feedback">Looks good!</div>
+         </div> 
+
+            <br><br>
+            <button class="btn btn-dark add-btn">Add</button>
+        </div>
+    </div>
+    <br><br>
+   </form> 
+</body>
