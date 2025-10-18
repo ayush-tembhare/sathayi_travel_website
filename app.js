@@ -21,7 +21,7 @@ const listingsRouter=require("./routes/listing.js");
 const reviewsRouter = require("./routes/review.js");
 const userRouter= require("./routes/user.js");
 
-// const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL="mongodb://127.0.0.1:27017/wanderlust";
 const dbUrl=process.env.ATLASDB_URL;
 mongoose.connect(dbUrl)
   .then(() => console.log("connected to db"))
@@ -78,7 +78,8 @@ passport.deserializeUser(User.deserializeUser());
 app.use((req,res,next) =>{
     res.locals.success=req.flash("success");
     res.locals.error=req.flash("error");
-    res.locals.currUser=req.user;
+    res.locals.currUser = req.user;
+     res.locals.req = req; 
     next();
 });
 

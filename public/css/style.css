@@ -55,8 +55,11 @@ body{
 
 /* /card/ */
 .listing-card{
-    border:none !important;
+    border: none !important;      /* no border normally */
+    border-radius: 0;             /* no rounding normally */
+    box-shadow: none;             /* no shadow normally */
     margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
 }
 .review-card {
     border: 2px solid #ccc !important;
@@ -86,13 +89,19 @@ body{
     
 }
 /* /card effect/ */
+.home-page .listing-card:hover {
+    transform: translateY(-10px) scale(1.03); /* lift slightly */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); /* subtle shadow */
+    z-index: 5;
+}
+
 .card-img-overlay{
     opacity: 0;
 }
-.card-img-overlay:hover{
+/* .card-img-overlay:hover{
     opacity:0.2;
     background-color: wheat;
-}
+} */
 
 
 .btn-dark {

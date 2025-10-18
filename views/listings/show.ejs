@@ -1,22 +1,22 @@
 <% layout('layouts/boilerplate') %>
 
-<div class="container mt-3">
+<div class="container-fluid mt-3">
   <!-- Title -->
-  <div class="row">
-    <div class="col-8 offset-2">
-      <h3><%= listing.title %></h3>
+  <div class="row text-center">
+    <div class="col-12">
+      <h3 class="fw-bold"><%= listing.title %></h3>
     </div>
   </div>
 
   <!-- Listing Card -->
-  <div class="row mt-3">
-    <div class="col-6 offset-3">
-      <div class="card show-card listing-card">
+  <div class="row justify-content-center mt-3">
+    <div class="col-12 col-md-10 col-lg-6">
+      <div class="card show-card border-0 shadow-sm listing-card">
         <img src="<%= listing.image.url %>" class="card-img-top show-img" alt="listing_image">
-        <div class="card-body">
-          <p class="card-text"><i>Owned by: <%= listing.owner.username %></i></p>
+        <div class="card-body p-4">
+          <p class="text-muted"><i>Owned by: <%= listing.owner.username %></i></p>
           <p><%= listing.description %></p>
-          <p>&#8377;<%= listing.price ? Number(listing.price).toLocaleString("en-IN") : "Price not available" %></p>
+          <p class="fw-semibold">&#8377;<%= listing.price ? Number(listing.price).toLocaleString("en-IN") : "Price not available" %></p>
           <p><%= listing.location %></p>
           <p><%= listing.country %></p>
         </div>
@@ -38,7 +38,7 @@
 
   <!-- Reviews Section -->
   <div class="row mt-4">
-    <div class="col-8 offset-2">
+    <div class="col-12 col-md-10 col-lg-8">
 
       
       <!-- Review Form -->
@@ -86,7 +86,7 @@
       <div class="row">
           <p><b>All Reviews</b></p>
         <% for (let review of listing.reviews) { %>
-          <div class="card col-5 ms-3 mb-3">
+          <div class="class="card flex-fill p-3 shadow-sm" style="min-width: 250px;">
             <h5 class="card-title">@<%= review.author.username %></h5>
             <p class="starability-result card-text" data-rating="<%= review.rating %>">
               Rated: <%= review.rating %> stars
